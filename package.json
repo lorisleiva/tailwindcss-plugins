@@ -1,0 +1,21 @@
+{
+  "name": "tailwindcss-plugins",
+  "version": "0.1.0",
+  "description": "Set of useful plugins for tailwindcss",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lorisleiva/tailwindcss-plugins.git"
+  },
+  "keywords": [
+    "tailwindcss",
+    "plugins",
+    "gradients"
+  ],
+  "author": "Loris Leiva <loris.leiva@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lorisleiva/tailwindcss-plugins/issues"
+  },
+  "homepage": "https://github.com/lorisleiva/tailwindcss-plugins#readme"
+}
