@@ -1,1 +1,0 @@
-module.gradients = require('./gradients.js')
