@@ -19,3 +19,5 @@ plugins: [
 ## Available plugins
 
 - :rainbow: [**gradients**](gradients) Define linear gradient backgrounds.
+
+*More to come. Don't hesitate to share your ideas by opening an issue.*
