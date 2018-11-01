@@ -1,10 +1,10 @@
 const map = require('lodash/map')
 
-module.exports = function({ gradients, variants }) {
+module.exports = function({ gradients, types = {}, variants }) {
     return function({ addUtilities, e }) {
         const utilities = map(gradients, ([angle, ...colors], name) => ({
             [`.bg-${e(name)}`]: {
-                backgroundImage: `linear-gradient(${angle}, ${colors.join(', ')})`
+                backgroundImage: `${(types.hasOwnProperty(name) ? types[name] : 'linear')}-gradient(${angle}, ${colors.join(', ')})`
             }
         }))
 
