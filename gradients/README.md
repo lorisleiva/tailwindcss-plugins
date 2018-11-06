@@ -13,22 +13,21 @@ npm i tailwindcss-plugins -D
 ## Usage
 The gradients object is `key`/`value` based where the `key` will form part of the class name. The `value` can be either and `array` (to form a linear gradient) or an `object` with two keys `type` and `colors`.
 
-The `type` key allows for changing the gradient type e.g. passing in `'radial'`. The `colors` key works in the same way as passing an `array` with generating the angle and colors of the gradient.
-
 ```js
 plugins: [
     require('tailwindcss-plugins/gradients')({
         gradients: {
-            // Linear Gradients
+            // Array definition (defaults to linear gradients).
             'topaz':      ['30deg', colors['orange'], colors['pink-light']],
             'topaz-dark': ['30deg', colors['orange-dark'], colors['pink']],
             'emerald':    ['to right', colors['green-light'], colors['teal']],
             'fireopal':   ['to right', '#40E0D0', '#FF8C00', '#FF0080'],
             'relay':      ['to top left', '#3A1C71', '#D76D77', '#FFAF7B'],
-            // Radial Gradient
+
+            // Object definition.
             'mono-circle': {
-              type: 'radial',
-              colors: ['circle', '#CCC', '#000']
+                type: 'radial',
+                colors: ['circle', '#CCC', '#000']
             },
         },
         variants: ['responsive', 'hover']
@@ -39,6 +38,7 @@ plugins: [
 ```
 
 - **class names:** `bg-` followed by the gradient key. E.g. `bg-topaz`.
+- **type definitions:** Can be: `linear` (default), `radial`, `repeating-linear`, `repeating-radial`.
 - **color definitions:** `Array` such that:
-    - The first item defines the angle of the gradient.
+    - The first item defines the angle of the gradient. (optional)
     - The other items define the (unlimited) colors of the gradient.
