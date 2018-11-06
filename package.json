@@ -18,7 +18,19 @@
     "url": "https://github.com/lorisleiva/tailwindcss-plugins/issues"
   },
   "homepage": "https://github.com/lorisleiva/tailwindcss-plugins#readme",
+  "scripts": {
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+			"test/*.js",
+			"!**/util.js"
+		]
+  },
   "dependencies": {
     "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-rc.1"
   }
 }

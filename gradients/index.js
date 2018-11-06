@@ -1,12 +1,12 @@
 const map = require('lodash/map')
-const isObject = require('lodash/isObject')
+const isPlainObject = require('lodash/isPlainObject')
 
 module.exports = function ({ gradients, variants }) {
     return function ({ addUtilities, e }) {
         const utilities = map(gradients, (gradient, name) => {
 
-            const type = isObject(gradient) && gradient.hasOwnProperty('type') ? gradient.type : 'linear'
-            const colors = isObject(gradient) ? (gradient.colors || []) : gradient
+            const type = isPlainObject(gradient) && gradient.hasOwnProperty('type') ? gradient.type : 'linear'
+            const colors = isPlainObject(gradient) ? (gradient.colors || []) : gradient
 
             return {
                 [`.bg-${e(name)}`]: {
