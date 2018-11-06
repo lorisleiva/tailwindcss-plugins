@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-plugins",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Set of useful plugins for tailwindcss",
   "main": "index.js",
   "repository": {
