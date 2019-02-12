@@ -23,12 +23,9 @@
   },
   "ava": {
     "files": [
-			"test/*.js",
-			"!**/util.js"
-		]
-  },
-  "dependencies": {
-    "lodash": "^4.17.10"
+      "test/*.js",
+      "!**/util.js"
+    ]
   },
   "devDependencies": {
     "ava": "1.0.0-rc.1"
