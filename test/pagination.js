@@ -53,6 +53,10 @@ test('it provides a default style when no configuration is given', t => {
         '.pagination .page-item:first-child .page-link:hover': undefined,
         '.pagination .page-item:hover': undefined,
         '.pagination .page-item:last-child .page-link:hover': undefined,
+        '.pagination .page-item:nth-child(2) .page-link': undefined,
+        '.pagination .page-item:nth-child(2) .page-link:hover': undefined,
+        '.pagination .page-item:nth-last-child(2) .page-link': undefined,
+        '.pagination .page-item:nth-last-child(2) .page-link:hover': undefined,
     })
 });
 
