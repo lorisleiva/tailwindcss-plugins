@@ -59,48 +59,39 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
 ```
 
 ## Examples
-<table>
-    <tr>
-        <td>
-            <img alt="pagination_1" src="https://user-images.githubusercontent.com/3642397/54760185-74c35e00-4be7-11e9-99de-72ae47e37094.png">
-        </td>
-        <td>
-            <pre lang="js">
-                {}
-            </pre>
-        </td>
-    </tr>
-    <tr>
-        <td>
-           <img alt="pagination_2" src="https://user-images.githubusercontent.com/3642397/54760188-75f48b00-4be7-11e9-94f8-d0a263cb18db.png">
-        </td>
-        <td>
-            <pre lang="js">
+
+<p align="center"><img width="300" alt="pagination_1" src="https://user-images.githubusercontent.com/3642397/54760185-74c35e00-4be7-11e9-99de-72ae47e37094.png"></p>
+
+```js
+{}
+```
+
+---
+
+<p align="center"><img width="300" alt="pagination_2" src="https://user-images.githubusercontent.com/3642397/54760188-75f48b00-4be7-11e9-94f8-d0a263cb18db.png"></p>
+
+```js
 {
     color: colors['teal-dark'],
 }
-            </pre>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img alt="pagination_3" src="https://user-images.githubusercontent.com/3642397/54760190-77be4e80-4be7-11e9-912b-463377e54636.png">
-        </td>
-        <td>
-            <pre lang="js">
+```
+
+---
+
+<p align="center"><img width="300" alt="pagination_3" src="https://user-images.githubusercontent.com/3642397/54760190-77be4e80-4be7-11e9-912b-463377e54636.png"></p>
+
+```js
 {
     color: colors['pink-dark'],
     wrapper: 'inline-flex list-reset shadow rounded'
 }
-            </pre>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img alt="pagination_4" src="https://user-images.githubusercontent.com/3642397/54760193-79881200-4be7-11e9-8a4d-4194b1b6a678.png">
-        </td>
-        <td>
-            <pre lang="js">
+```
+
+---
+
+<p align="center"><img width="300" alt="pagination_4" src="https://user-images.githubusercontent.com/3642397/54760193-79881200-4be7-11e9-8a4d-4194b1b6a678.png"></p>
+
+```js
 {
     color: colors['purple-dark'],
     linkFirst: 'mr-6 border rounded',
@@ -108,15 +99,13 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
     linkBeforeLast: 'rounded-r border-r',
     linkLast: 'ml-6 border rounded',
 }
-            </pre>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img alt="pagination_5" src="https://user-images.githubusercontent.com/3642397/54760197-7b51d580-4be7-11e9-9d01-298a48d35feb.png">
-        </td>
-        <td>
-            <pre lang="js">
+```
+
+---
+
+<p align="center"><img width="300" alt="pagination_5" src="https://user-images.githubusercontent.com/3642397/54760197-7b51d580-4be7-11e9-9d01-298a48d35feb.png"></p>
+
+```js
 {
     color: colors['orange-light'],
     link: 'bg-grey-darkest py-4 px-2 border-r border-grey-dark text-white no-underline',
@@ -125,15 +114,13 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
     linkFirst: null,
     linkLast: 'border-0',
 }
-            </pre>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <img alt="pagination_6" src="https://user-images.githubusercontent.com/3642397/54760199-7c830280-4be7-11e9-85d4-d503f7dc12d1.png">
-        </td>
-        <td>
-            <pre lang="js">
+```
+
+---
+
+<p align="center"><img width="300" alt="pagination_6" src="https://user-images.githubusercontent.com/3642397/54760199-7c830280-4be7-11e9-85d4-d503f7dc12d1.png"></p>
+
+```js
 {
     link: 'bg-white px-3 py-1 border-r border-t border-b text-black no-underline',
     linkActive: 'bg-yellow-lighter border-yellow font-bold',
@@ -148,7 +135,4 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
         'border-top-right-radius': '999px',
     },
 }
-            </pre>
-        </td>
-    </tr>
-</table>
+```
