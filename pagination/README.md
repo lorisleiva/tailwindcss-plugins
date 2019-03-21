@@ -10,7 +10,22 @@ Customizable pagination component that integrates perfectly with Laravel.
 npm i tailwindcss-plugins -D
 ```
 
-## Usage
+## Basic usage
+
+```js
+plugins: [
+    require('tailwindcss-plugins/pagination')(),
+    // ...
+],
+```
+
+If you use Laravel to paginate a collection of `$items`, all you have to do is:
+
+```php
+{{ $items->links() }}
+```
+
+## Advanced usage
 You can customize the main pagination color by setting the `color` key and/or customize the CSS of all elements of the pagination component.
 
 ```js
