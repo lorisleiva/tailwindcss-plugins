@@ -1,8 +1,9 @@
 import test from 'ava'
-import pagination from '../pagination'
+import paginationPlugin from '../pagination'
 import { simulate } from './util'
 
-let simulatePagination = config => simulate(pagination(config)).components
+let simulatePagination = (pagination = {}) => 
+    simulate(paginationPlugin, { theme: { pagination } }).components
 
 test('it provides a default style when no configuration is given', t => {
     const newComponents = simulatePagination()
