@@ -1,8 +1,11 @@
 import test from 'ava'
-import gradients from '../gradients'
+import gradientsPlugin from '../gradients'
 import { simulate } from './util'
 
-let simulateGradients = g => simulate(gradients({ gradients: g })).utilities
+let simulateGradients = (gradients, variants = []) => simulate(gradientsPlugin, {
+    theme: { gradients },
+    variants: { gradients: variants },
+}).utilities
 
 test('it supports array definition and uses linear gradient by default', t => {
     const newUtilities = simulateGradients({
