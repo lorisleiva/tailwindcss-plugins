@@ -7,11 +7,13 @@
 npm i tailwindcss-plugins -D
 ```
 
+If you're using Tailwind CSS version `0.x`, please run `npm i tailwindcss-plugins@^1.0 -D`.
+
 ## General usage
 
 ```js
 plugins: [
-    require('tailwindcss-plugins/PLUGIN_NAME')(PLUGIN_OPTIONS),
+    require('tailwindcss-plugins/PLUGIN_NAME'),
     // ...
 ],
 ```
