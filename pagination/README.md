@@ -29,23 +29,24 @@ If you use Laravel to paginate a collection of `$items`, all you have to do is:
 You can customize the main pagination color by setting the `color` key and/or customize the CSS of all elements of the pagination component.
 
 ```js
-plugins: [
-    require('tailwindcss-plugins/pagination')({
+theme: {
+    pagination: {
         // Costumize the color only. (optional)
         color: colors['teal-dark'],
-
+    
         // Costumize styling using @apply. (optional)
         wrapper: 'flex justify-center list-reset'
-
+    
         // Costumize styling using CSS-in-JS. (optional)
         wrapper: {
             'display': 'flex',
             'justify-items': 'center',
             '@apply list-reset': {},
         }
-    }),
-
-    // ...
+    }
+},
+plugins: [
+    require('tailwindcss-plugins/pagination'),
 ],
 ```
 

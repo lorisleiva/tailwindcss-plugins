@@ -16,18 +16,18 @@ The gradients object is `key`/`value` based where the `key` will form part of th
 ```js
 theme: {
     gradients: theme => ({
-            // Array definition (defaults to linear gradients).
-            'topaz':      ['30deg', theme('colors.orange.500'), theme('colors.pink.300')],
-            'topaz-dark': ['30deg', theme('colors.orange.700'), theme('colors.pink.500')],
-            'emerald':    ['to right', theme('colors.green.300'), theme('colors.teal.500')],
-            'fireopal':   ['to right', '#40E0D0', '#FF8C00', '#FF0080'],
-            'relay':      ['to top left', '#3A1C71', '#D76D77', '#FFAF7B'],
+        // Array definition (defaults to linear gradients).
+        'topaz':      ['30deg', theme('colors.orange.500'), theme('colors.pink.300')],
+        'topaz-dark': ['30deg', theme('colors.orange.700'), theme('colors.pink.500')],
+        'emerald':    ['to right', theme('colors.green.300'), theme('colors.teal.500')],
+        'fireopal':   ['to right', '#40E0D0', '#FF8C00', '#FF0080'],
+        'relay':      ['to top left', '#3A1C71', '#D76D77', '#FFAF7B'],
 
-            // Object definition.
-            'mono-circle': {
-                type: 'radial',
-                colors: ['circle', '#CCC', '#000']
-            },
+        // Object definition.
+        'mono-circle': {
+            type: 'radial',
+            colors: ['circle', '#CCC', '#000']
+        },
     }),
 },
 variants: {
