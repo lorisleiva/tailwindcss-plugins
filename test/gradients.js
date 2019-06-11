@@ -5,14 +5,14 @@ import { simulate } from './util'
 let simulateGradients = (gradients, variants = []) => simulate(gradientsPlugin, {
     theme: { gradients },
     variants: { gradients: variants },
-}).utilities
+})
 
 test('it supports array definition and uses linear gradient by default', t => {
-    const newUtilities = simulateGradients({
+    const added = simulateGradients({
         topaz: ['to right', 'blue', 'red']
     })
 
-    t.deepEqual(newUtilities, {
+    t.deepEqual(added.utilities, {
         '.bg-topaz': {
             backgroundImage: 'linear-gradient(to right, blue, red)'
         }
@@ -20,14 +20,14 @@ test('it supports array definition and uses linear gradient by default', t => {
 });
 
 test('it supports object definition', t => {
-    const newUtilities = simulateGradients({
+    const added = simulateGradients({
         topaz: {
             colors: ['to right', 'blue', 'red'],
             type: 'linear'
         }
     })
 
-    t.deepEqual(newUtilities, {
+    t.deepEqual(added.utilities, {
         '.bg-topaz': {
             backgroundImage: 'linear-gradient(to right, blue, red)'
         }
@@ -35,11 +35,11 @@ test('it supports object definition', t => {
 });
 
 test('it uses unlimited colors', t => {
-    const newUtilities = simulateGradients({
+    const added = simulateGradients({
         unlimited: ['blue', 'red', 'pink', 'yellow', 'orange', 'black', 'purple', 'white']
     })
 
-    t.deepEqual(newUtilities, {
+    t.deepEqual(added.utilities, {
         '.bg-unlimited': {
             backgroundImage: 'linear-gradient(blue, red, pink, yellow, orange, black, purple, white)'
         }
@@ -47,7 +47,7 @@ test('it uses unlimited colors', t => {
 });
 
 test('it supports multiple gradients', t => {
-    const newUtilities = simulateGradients({
+    const added = simulateGradients({
         'topaz': ['to right', 'blue', 'red'],
         'topaz-dark': ['to right', 'darkblue', 'darkred'],
         'emerald': ['to bottom', 'green', 'lightgreen'],
@@ -55,7 +55,7 @@ test('it supports multiple gradients', t => {
         'relay': ['to top left', '#3A1C71', '#D76D77', '#FFAF7B'],
     })
 
-    t.deepEqual(newUtilities, {
+    t.deepEqual(added.utilities, {
         '.bg-topaz': { backgroundImage: 'linear-gradient(to right, blue, red)' },
         '.bg-topaz-dark': { backgroundImage: 'linear-gradient(to right, darkblue, darkred)' },
         '.bg-emerald': { backgroundImage: 'linear-gradient(to bottom, green, lightgreen)' },
@@ -65,17 +65,29 @@ test('it supports multiple gradients', t => {
 });
 
 test('it supports linear, radial, repeating-linear, repeating-radial gradients', t => {
-    const newUtilities = simulateGradients({
+    const added = simulateGradients({
         'topaz-linear': { colors: ['blue', 'red'], type: 'linear' },
         'topaz-radial': { colors: ['blue', 'red'], type: 'radial' },
         'topaz-repeating-linear': { colors: ['blue', 'red'], type: 'repeating-linear' },
         'topaz-repeating-radial': { colors: ['blue', 'red'], type: 'repeating-radial' },
     })
 
-    t.deepEqual(newUtilities, {
+    t.deepEqual(added.utilities, {
         '.bg-topaz-linear': { backgroundImage: 'linear-gradient(blue, red)' },
         '.bg-topaz-radial': { backgroundImage: 'radial-gradient(blue, red)' },
         '.bg-topaz-repeating-linear': { backgroundImage: 'repeating-linear-gradient(blue, red)' },
         '.bg-topaz-repeating-radial': { backgroundImage: 'repeating-radial-gradient(blue, red)' },
+    })
+});
+
+test('it supports variants', t => {
+    const added = simulateGradients(
+        { topaz: ['to right', 'blue', 'red'] },
+        ['responsive', 'hover']
+    )
+
+    t.deepEqual(added.variants, {
+        'responsive': ['.bg-topaz'],
+        'hover': ['.bg-topaz'],
     })
 });
