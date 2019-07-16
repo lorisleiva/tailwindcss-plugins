@@ -14,7 +14,7 @@ npm i tailwindcss-plugins -D
 
 ```js
 plugins: [
-    require('tailwindcss-plugins/pagination')(),
+    require('tailwindcss-plugins/pagination'),
     // ...
 ],
 ```
