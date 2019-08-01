@@ -7,7 +7,7 @@
 npm i tailwindcss-plugins -D
 ```
 
-If you're using Tailwind CSS version `0.x`, please run `npm i tailwindcss-plugins@^1.0 -D`.
+If you're using Tailwind CSS version `0.x`, please run `npm i tailwindcss-plugins@^0.1.0 -D`.
 
 ## General usage
 
