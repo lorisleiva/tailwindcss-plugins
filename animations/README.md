@@ -25,8 +25,8 @@ plugins: [
 ```
 
 ```html
-<svg class="spin fill-current w-5 h-5"><!-- ... --></svg>
-<div :class="{ shake: hasError }"><!-- ... --></div>
+<svg class="spin fill-current w-5 h-5"></svg>
+<div :class="{ shake: hasError }"></div>
 ```
 
 ## Why not breaking down each animation property? (name, duration, delay, etc.)
