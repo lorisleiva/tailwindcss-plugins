@@ -38,7 +38,7 @@ theme: {
     },
 },
 plugins: [
-    require('tailwindcss-plugins/animation'),
+    require('tailwindcss-plugins/animations'),
     require('tailwindcss-plugins/keyframes/spin'),
 ],
 ```
@@ -54,7 +54,7 @@ theme: {
     },
 },
 plugins: [
-    require('tailwindcss-plugins/animation'),
+    require('tailwindcss-plugins/animations'),
     require('tailwindcss-plugins/keyframes/shake'),
 ],
 ```
