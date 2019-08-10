@@ -1,6 +1,6 @@
 # :rainbow: Gradients
 
-Define linear gradient backgrounds.
+Define gradient backgrounds.
 
 <img width="314" alt="gradients" src="https://user-images.githubusercontent.com/3642397/39958708-e8295e76-5606-11e8-95bf-8b05846ba596.png">
 
@@ -11,7 +11,7 @@ npm i tailwindcss-plugins -D
 ```
 
 ## Usage
-The gradients object is `key`/`value` based where the `key` will form part of the class name. The `value` can be either and `array` (to form a linear gradient) or an `object` with two keys `type` and `colors`.
+The gradients configuration can be an object or a function returning an object if you'd like to use the `theme` function to define your colours (see below). The keys of that object is used to define the class name: `bg-${key}`. The values can either be an `array` (to form a linear gradient) or an `object` with two keys `type` and `colors`.
 
 ```js
 theme: {
