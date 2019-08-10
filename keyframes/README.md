@@ -29,6 +29,8 @@ See the [animations](../animations) plugin to define animations using those keyf
 
 ### spin
 
+![spin](https://user-images.githubusercontent.com/3642397/62825253-a5a92d00-bba0-11e9-94b7-8f284103e4ab.gif)
+
 ```js
 theme: {
     animations: {
@@ -42,6 +44,8 @@ plugins: [
 ```
 
 ### shake
+
+![shake](https://user-images.githubusercontent.com/3642397/62825252-a5a92d00-bba0-11e9-8666-7992e5ec4320.gif)
 
 ```js
 theme: {
