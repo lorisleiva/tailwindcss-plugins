@@ -1,13 +1,9 @@
-const mapObject = (obj, fn) => Object.keys(obj).map(key => fn(obj[key], key, obj));
-const isPlainObject = val => !!val && typeof val === 'object' && val.constructor === Object;
+const _ = require('lodash')
 
 module.exports = function ({ addUtilities, e, theme, variants }) {
-    const gradients = theme('gradients', {})
-    const gradientVariants = variants('gradients', [])
-    
-    const utilities = mapObject(gradients, (gradient, name) => {
-        const type = isPlainObject(gradient) && gradient.hasOwnProperty('type') ? gradient.type : 'linear'
-        const colors = isPlainObject(gradient) ? (gradient.colors || []) : gradient
+    const utilities = _.map(theme('gradients', {}), (gradient, name) => {
+        const type = _.isPlainObject(gradient) && gradient.hasOwnProperty('type') ? gradient.type : 'linear'
+        const colors = _.isPlainObject(gradient) ? (gradient.colors || []) : gradient
 
         return {
             [`.bg-${e(name)}`]: {
@@ -16,5 +12,5 @@ module.exports = function ({ addUtilities, e, theme, variants }) {
         }
     })
 
-    addUtilities(utilities, gradientVariants)
+    addUtilities(utilities, variants('gradients', []))
 }
