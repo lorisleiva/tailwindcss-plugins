@@ -23,5 +23,6 @@ plugins: [
 - :rainbow: [**gradients**](gradients) Define gradient backgrounds.
 - :open_book: [**pagination**](pagination) Customizable pagination component that integrates perfectly with Laravel.
 - :movie_camera: [**animations**](animations) Define CSS animations.
+- 🎞️ [**keyframes**](keyframes) Define CSS keyframes.
 
 *More to come. Don't hesitate to share your ideas by opening an issue.*

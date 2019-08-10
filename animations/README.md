@@ -2,8 +2,6 @@
 
 Define CSS animations
 
-TODO: Image
-
 ## Installation
 
 ```bash
@@ -11,7 +9,7 @@ npm i tailwindcss-plugins -D
 ```
 
 ## Usage
-The animations object is `key`/`value` based where **the `key` is the class name generated**.
+The animations object is `key`/`value` based where **the `key` is the class name generated**. This plugin assumes any keyframes used are available. See the [keyframes](../keyframes) plugin to use existing keyframes or create your own ones directly from your TailwindCSS config file.
 
 ```js
 theme: {
