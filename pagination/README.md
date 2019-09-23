@@ -30,9 +30,9 @@ You can customize the main pagination color by setting the `color` key and/or cu
 
 ```js
 theme: {
-    pagination: {
+    pagination: theme => ({
         // Costumize the color only. (optional)
-        color: colors['teal-dark'],
+        color: theme('colors.teal.600'),
     
         // Costumize styling using @apply. (optional)
         wrapper: 'flex justify-center list-reset'
@@ -43,7 +43,7 @@ theme: {
             'justify-items': 'center',
             '@apply list-reset': {},
         }
-    }
+    })
 },
 plugins: [
     require('tailwindcss-plugins/pagination'),
@@ -87,9 +87,9 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
 <p align="center"><img width="300" alt="pagination_2" src="https://user-images.githubusercontent.com/3642397/54760188-75f48b00-4be7-11e9-94f8-d0a263cb18db.png"></p>
 
 ```js
-{
-    color: colors['teal-dark'],
-}
+theme => ({
+    color: theme('colors.teal.600'),
+})
 ```
 
 ---
@@ -97,10 +97,10 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
 <p align="center"><img width="300" alt="pagination_3" src="https://user-images.githubusercontent.com/3642397/54760190-77be4e80-4be7-11e9-912b-463377e54636.png"></p>
 
 ```js
-{
-    color: colors['pink-dark'],
+theme => ({
+    color: theme('colors.pink.600'),
     wrapper: 'inline-flex list-reset shadow rounded'
-}
+})
 ```
 
 ---
@@ -108,13 +108,13 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
 <p align="center"><img width="300" alt="pagination_4" src="https://user-images.githubusercontent.com/3642397/54760193-79881200-4be7-11e9-8a4d-4194b1b6a678.png"></p>
 
 ```js
-{
-    color: colors['purple-dark'],
+theme => ({
+    color: theme('colors.purple.600'),
     linkFirst: 'mr-6 border rounded',
     linkSecond: 'rounded-l border-l',
     linkBeforeLast: 'rounded-r border-r',
     linkLast: 'ml-6 border rounded',
-}
+})
 ```
 
 ---
@@ -122,14 +122,14 @@ linkDisabledHover:      .pagination .page-item.disabled .page-link:hover
 <p align="center"><img width="300" alt="pagination_5" src="https://user-images.githubusercontent.com/3642397/54760197-7b51d580-4be7-11e9-9d01-298a48d35feb.png"></p>
 
 ```js
-{
-    color: colors['orange-light'],
+theme => ({
+    color: theme('colors.orange.300'),
     link: 'bg-grey-darkest py-4 px-2 border-r border-grey-dark text-white no-underline',
     linkHover: 'bg-grey-dark',
     linkDisabled: 'bg-grey-dark',
     linkFirst: null,
     linkLast: 'border-0',
-}
+})
 ```
 
 ---
