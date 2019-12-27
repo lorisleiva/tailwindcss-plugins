@@ -31,18 +31,18 @@ You can customize the main pagination color by setting the `color` key and/or cu
 ```js
 theme: {
     pagination: theme => ({
-        // Costumize the color only. (optional)
+        // Customize the color only. (optional)
         color: theme('colors.teal.600'),
     
-        // Costumize styling using @apply. (optional)
-        wrapper: 'flex justify-center list-reset'
+        // Customize styling using @apply. (optional)
+        wrapper: 'flex justify-center list-reset',
     
-        // Costumize styling using CSS-in-JS. (optional)
+        // Customize styling using CSS-in-JS. (optional)
         wrapper: {
             'display': 'flex',
             'justify-items': 'center',
             '@apply list-reset': {},
-        }
+        },
     })
 },
 plugins: [
